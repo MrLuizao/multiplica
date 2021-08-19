@@ -1,5 +1,10 @@
 <ion-header>
-  <app-navigate-toolbar-generic></app-navigate-toolbar-generic>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title >i Grow</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -26,8 +31,29 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>PRICE</ion-card-subtitle>
-      <h1>{{data.price}} / unit</h1>
+      <ion-card-subtitle color="secondary">PRICE</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="2">
+            <h3>Rp.</h3>
+          </ion-col>
+          <ion-col size="4">
+            <ion-text >
+              <h1>{{data.price}}</h1>
+            </ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text color="tertiary">
+              <h3 style="margin-top: 1em;">/ unit</h3>
+            </ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <div class="icon-rounded">
+              <ion-img src="assets/pizarron.png" style="padding: 1em;"></ion-img>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-header>
 
   </ion-card>
@@ -35,20 +61,15 @@
   <ion-grid style="padding: 2em; margin-top: -1em;">
     <ion-row>
       <ion-col size="5">
-        <ion-text color="primary">
-          <ion-card-subtitle>CONTRACT</ion-card-subtitle>
-
-        </ion-text>
-        <ion-text color="secondary">
+        <ion-card-subtitle color="secondary">CONTRACT</ion-card-subtitle>
+        <ion-text color="tertiary">
           <p>{{data.years}} years</p>
         </ion-text>
       </ion-col>
 
       <ion-col size="7">
-        <ion-text color="primary">
-          <ion-card-subtitle>LOCATION</ion-card-subtitle>
-        </ion-text>
-        <ion-text color="secondary">
+        <ion-card-subtitle color="secondary">LOCATION</ion-card-subtitle>
+        <ion-text color="tertiary">
           <p>{{data.location}}</p>
         </ion-text>
       </ion-col>
@@ -56,20 +77,16 @@
 
     <ion-row style="margin-top: 1em;">
       <ion-col size="5">
-        <ion-text color="primary">
-          <ion-card-subtitle>HARVEST</ion-card-subtitle>
-        </ion-text>
-        <ion-text color="secondary">
+        <ion-card-subtitle color="secondary">HARVEST</ion-card-subtitle>
+        <ion-text color="tertiary">
           <p>Every year</p>
           <p>After {{data.harvest}} year</p>
         </ion-text>
       </ion-col>
 
       <ion-col size="7">
-        <ion-text color="primary">
-          <ion-card-subtitle>PLANTED</ion-card-subtitle>
-        </ion-text>
-        <ion-text color="secondary">
+        <ion-card-subtitle color="secondary">PLANTED</ion-card-subtitle>
+        <ion-text color="tertiary">
           <p>{{data.trees}} tree plantation</p>
           <p>have been sponsored</p>
           <p>by {{data.people}} people</p>
