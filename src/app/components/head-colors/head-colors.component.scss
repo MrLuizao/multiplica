@@ -1,0 +1,18 @@
+.contain-head {
+    width: -webkit-fill-available;
+    position: absolute;
+}
+
+.back-circle {
+    width: 10em;
+    height: 10em;
+    background: #FFCC29;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -5em;
+    opacity: 0.8;
+}

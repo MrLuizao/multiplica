@@ -1,23 +1,10 @@
 
 <ion-header>
-  <div class="contain-head">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-      <path fill="#206A5D" fill-opacity="0.9" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,192C840,213,960,203,1080,192C1200,181,1320,171,1380,165.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-    </svg> 
-  </div>
-  <div class="contain-head">
-    <div class="back-circle"></div>
-  </div>
-  <div class="contain-head">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-      <path fill="#81B214" fill-opacity="0.8" d="M0,128L40,138.7C80,149,160,171,240,197.3C320,224,400,256,480,240C560,224,640,160,720,128C800,96,880,96,960,117.3C1040,139,1120,181,1200,208C1280,235,1360,245,1400,250.7L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-    </svg>
-  </div>
+  <app-head-colors></app-head-colors>
 </ion-header>
 
 
 <ion-content>
-  
   <ion-grid style="margin-top: 5em; text-align: center;">
 
     <ion-row >
@@ -30,45 +17,24 @@
       <ion-col size="3"></ion-col>
     </ion-row>
 
-    <ion-grid>
-      <ion-row class="ion-padding">
-        <ion-col size="6" *ngFor="let item of items">
-          <div class="ion-padding" (click)="openTapItem(item.id)" >
-            <img [src]="item.image" class="rounded"/>
-            <div class="ion-padding">
-              <ion-text color="secondary">
-                <p>{{item.title}}</p>
-              </ion-text>
-              <ion-badge color="tertiary">{{item.min}} - {{item.max}} %</ion-badge>
-            </div>
+    <ion-row class="ion-padding">
+      <ion-col size="6" *ngFor="let item of items">
+        <div class="ion-padding" (click)="openTapItem(item.id)" >
+          <img [src]="item.image" class="rounded"/>
+          <div class="ion-padding">
+            <ion-text color="secondary">
+              <p>{{item.title}}</p>
+            </ion-text>
+            <ion-badge color="tertiary">{{item.min}} - {{item.max}} %</ion-badge>
           </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
 
   </ion-grid>
-
 </ion-content>
 
 <ion-footer>
-  <ion-grid style="text-align: center;">
-    <ion-row>
-      <ion-col>
-        <ion-icon color="medium" name="newspaper-outline"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <ion-icon color="primary" name="grid-outline"></ion-icon>
-      </ion-col>
-      <ion-col style="background-color: green; border-radius: 5px; margin-top: -1em;">
-        <ion-icon color="light" name="leaf-outline" style="margin-top: 0.3em;"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <ion-icon color="medium" name="notifications-outline"></ion-icon>
-      </ion-col>      
-      <ion-col>
-        <ion-icon color="medium" name="person-outline"></ion-icon>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <app-foot-tabs></app-foot-tabs>
 </ion-footer>
 
