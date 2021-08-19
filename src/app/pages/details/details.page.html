@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title >i Grow</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-wave">
+    <svg style="width: 65em;" fill="#81B214"  height="100%" width="100%" id="svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 C 0,700 0,350 0,350 C 137.59999999999997,404.6666666666667 275.19999999999993,459.33333333333337 435,433 C 594.8000000000001,406.66666666666663 776.8,299.33333333333337 948,272 C 1119.2,244.66666666666666 1279.6,297.3333333333333 1440,350 C 1440,350 1440,700 1440,700 Z" stroke="none" stroke-width="0" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 350)"></path></svg>
+  </div>
+
+  <ion-grid>
+    <ion-row style="padding: 2em;"> 
+      <ion-col size="6" >
+        <img [src]="data.image" class="rounded"/>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-text color="light">
+          <h1>{{data.title}}</h1>
+          <p>return per year</p>
+          <ion-badge color="tertiary">{{data.min}} - {{data.max}} %</ion-badge>
+          <p> stock {{data.stock}} tree </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>PRICE</ion-card-subtitle>
+      <h1>{{data.price}} / unit</h1>
+    </ion-card-header>
+
+  </ion-card>
+
+  <ion-grid style="padding: 2em; margin-top: -1em;">
+    <ion-row>
+      <ion-col size="5">
+        <ion-text color="primary">
+          <ion-card-subtitle>CONTRACT</ion-card-subtitle>
+
+        </ion-text>
+        <ion-text color="secondary">
+          <p>{{data.years}} years</p>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="7">
+        <ion-text color="primary">
+          <ion-card-subtitle>LOCATION</ion-card-subtitle>
+        </ion-text>
+        <ion-text color="secondary">
+          <p>{{data.location}}</p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 1em;">
+      <ion-col size="5">
+        <ion-text color="primary">
+          <ion-card-subtitle>HARVEST</ion-card-subtitle>
+        </ion-text>
+        <ion-text color="secondary">
+          <p>Every year</p>
+          <p>After 4th year</p>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="7">
+        <ion-text color="primary">
+          <ion-card-subtitle>PLANTED</ion-card-subtitle>
+        </ion-text>
+        <ion-text color="secondary">
+          <p>84 tree tree plantation</p>
+          <p>have been sponsored</p>
+          <p>by 34 people</p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row style="margin-top: 1em;">
+      <ion-col size="2"></ion-col>
+
+      <ion-col size="8">
+        <ion-button expand="block">
+          <ion-icon color="light" name="leaf-outline"></ion-icon>
+          &nbsp; &nbsp; INVEST NOW
+        </ion-button>   
+      </ion-col>
+    
+      <ion-col size="2"></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
