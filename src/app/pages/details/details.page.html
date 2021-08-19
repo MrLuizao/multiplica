@@ -1,10 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button  mode="md"></ion-back-button>
-    </ion-buttons>
-    <ion-title >i Grow</ion-title>
-  </ion-toolbar>
+  <app-navigate-toolbar-generic></app-navigate-toolbar-generic>
 </ion-header>
 
 <ion-content>
@@ -82,19 +77,7 @@
       </ion-col>
     </ion-row>
 
-
-    <ion-row style="margin-top: 1em;">
-      <ion-col size="2"></ion-col>
-
-      <ion-col size="8">
-        <ion-button expand="block">
-          <ion-icon color="light" name="leaf-outline"></ion-icon>
-          &nbsp; &nbsp; INVEST NOW
-        </ion-button>   
-      </ion-col>
-    
-      <ion-col size="2"></ion-col>
-    </ion-row>
+    <app-button-generic></app-button-generic>
 
   </ion-grid>
 
