@@ -5,7 +5,7 @@
 
 
 <ion-content>
-  <ion-grid style="margin-top: 5em; text-align: center;">
+  <ion-grid class="contain-grid">
 
     <ion-row >
       <ion-col size="3"></ion-col>
@@ -21,11 +21,11 @@
       <ion-col size="6" *ngFor="let item of items">
         <div class="ion-padding" (click)="openTapItem(item.id)" >
           <img [src]="item.image" class="rounded"/>
-          <div class="ion-padding">
+          <div>
             <ion-text color="secondary">
               <p>{{item.title}}</p>
             </ion-text>
-            <ion-badge color="tertiary">{{item.min}} - {{item.max}} %</ion-badge>
+            <ion-badge color="warning">{{item.min}} - {{item.max}} %</ion-badge>
           </div>
         </div>
       </ion-col>
